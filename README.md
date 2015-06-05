@@ -22,19 +22,19 @@ pip install -r requirements.txt
 ## Running Monitor
 
 1. Run Controller.py. The controller will add or update any messages into a database received from the nodes where Agent.py is running.
-
+&nbsp;
 ```bash
 python Controller.py
 ```
-
+&nbsp;
 2. Run Agent.py on every nodes that you want to monitor.
-
+&nbsp;
 ```bash
 python Agent.py
 ```
-
+&nbsp;
 3. Run Monitor.py on the same machine with Controller.py. This app will display a table with some information about the available nodes.
-
+&nbsp;
 ```bash
 python Monitor.py
 ```
