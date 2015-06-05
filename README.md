@@ -5,7 +5,7 @@
 - [Requirements](#requirements)
 - [Running Monitor](#running-monitor)
 
-**Requirements**
+### Requirements
 
 - [Python 2.7](https://www.python.org/download/releases/2.7/)
 - [RabbitMQ 3.5.3 or newer](https://www.rabbitmq.com/download.html)
@@ -19,7 +19,8 @@
 pip install -r requirements.txt
 ```
 
-**Running Monitor**
+### Running Monitor
+
 1. Run Controller.py. The controller will add or update any messages into a database received from the nodes where Agent.py is running.
 
 ```bash
