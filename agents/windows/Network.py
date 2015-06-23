@@ -16,8 +16,8 @@ class Network(object):
     def getNetworkAgent(self):
         _network = {}
         _network['BytesReceivedPersec'] = \
-                                self.network_instance.getBytesReceivedPersec()
+                                self.getBytesReceivedPersec()
         _network['BytesSentPersec'] = \
-                                self.network_instance.getBytesSentPersec()
+                                self.getBytesSentPersec()
 
         return _network
