@@ -27,10 +27,10 @@ pip install -r requirements.txt
 python Controller.py
 ```
 &nbsp;
-2. Run Agent.py on every nodes that you want to monitor.
+2. Run agent(s) on every nodes that you want to monitor. For this example I choose DiskAgent.py.
 &nbsp;
 ```bash
-python Agent.py
+python DiskAgent.py
 ```
 &nbsp;
 3. Run Monitor.py on the same machine with Controller.py. This app will display a table with some information about the available nodes.
