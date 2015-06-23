@@ -33,7 +33,6 @@ class Disk(object):
     def getUsedSpace(self, FreeSpace=None):
         if FreeSpace is None:
             return self.getTotalSpace() - self.getFreeSpace()
-
         return self.getTotalSpace() - FreeSpace
 
     def getReadUsage(self):
@@ -43,3 +42,14 @@ class Disk(object):
     def getWriteUsage(self):
         return self.objwmi.Win32_PerfRawData_PerfDisk_PhysicalDisk()[1] \
             .DiskWritesPerSec
+
+    def getDiskAgent(self):
+        _disk = {}
+
+        # _disk['ReadUsage'] = self.getReadUsage()
+        # _disk['WriteUsage'] = self.getWriteUsage()
+
+        _disk['FreeSpace'] = self.getFreeSpace()
+        _disk['TotalSpace'] = self.getTotalSpace()
+
+        return _disk

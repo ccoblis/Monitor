@@ -49,3 +49,14 @@ class Disk(object):
 
     def getWriteUsage(self):
         return 0
+
+    def getDiskAgent(self):
+        _disk = {}
+
+        # _disk['ReadUsage'] = self.getReadUsage()
+        # _disk['WriteUsage'] = self.getWriteUsage()
+
+        _disk['FreeSpace'] = self.getFreeSpace()
+        _disk['TotalSpace'] = self.getTotalSpace()
+
+        return _disk

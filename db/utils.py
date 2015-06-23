@@ -1,11 +1,14 @@
 import contextlib
 import functools
-import config
+import ConfigParser
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-engine = create_engine(config.db_url, echo = False)
+Config = ConfigParser.ConfigParser()
+Config.read("config.txt")
+db_url = Config.get('DB', 'db_url')
+engine = create_engine(db_url, echo = False)
 SessionClass = sessionmaker(bind = engine, expire_on_commit = False)
 
 

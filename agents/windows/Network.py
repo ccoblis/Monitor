@@ -12,3 +12,12 @@ class Network(object):
     def getBytesSentPersec(self):
         return self.objwmi.Win32_PerfRawData_Tcpip_NetworkInterface()[0] \
             .BytesSentPersec
+
+    def getNetworkAgent(self):
+        _network = {}
+        _network['BytesReceivedPersec'] = \
+                                self.network_instance.getBytesReceivedPersec()
+        _network['BytesSentPersec'] = \
+                                self.network_instance.getBytesSentPersec()
+
+        return _network

@@ -53,3 +53,12 @@ class Network(object):
             tx += eth['tx']['bytes']
 
         return tx
+
+    def getNetworkAgent(self):
+        _network = {}
+        _network['BytesReceivedPersec'] = \
+                                self.network_instance.getBytesReceivedPersec()
+        _network['BytesSentPersec'] = \
+                                self.network_instance.getBytesSentPersec()
+
+        return _network
